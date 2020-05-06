@@ -5,10 +5,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
+import { Button } from '@material-ui/core';
 
 const Hello = props => (
   <div>Hello {props.name}!</div>
 )
+
+// const Button = props => (
+//   <Button color="primary">Hello World</Button>;
+// )
 
 Hello.defaultProps = {
   name: 'David'
@@ -20,7 +25,11 @@ Hello.propTypes = {
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello name="React" />,
+    <Button color="primary">Hello World</Button>,
     document.body.appendChild(document.createElement('div')),
   )
 })
+
+// function App() {
+//   return <Button color="primary">Hello World</Button>;
+// }
