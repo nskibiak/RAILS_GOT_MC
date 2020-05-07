@@ -2,33 +2,27 @@
 // like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
 // of the page.
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
-import { Button } from '@material-ui/core';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
+import App from '../got/app';
 
-const Hello = props => (
-  <div>Hello {props.name}!</div>
-)
-
-// const Button = props => (
-//   <Button color="primary">Hello World</Button>;
-// )
+const Hello = (props) => <div>Hello {props.name}!</div>;
 
 Hello.defaultProps = {
-  name: 'David'
-}
+  name: 'David',
+};
 
 Hello.propTypes = {
-  name: PropTypes.string
-}
+  name: PropTypes.string,
+};
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Button color="primary">Hello World</Button>,
-    document.body.appendChild(document.createElement('div')),
-  )
-})
+    <App />,
+    document.body.appendChild(document.createElement('div'))
+  );
+});
 
 // function App() {
 //   return <Button color="primary">Hello World</Button>;
