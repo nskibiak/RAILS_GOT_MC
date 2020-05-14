@@ -4,3 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end
+
+# :registerable is for signing up; might want to disable for RAILS_GOT...
