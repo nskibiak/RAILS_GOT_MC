@@ -1,8 +1,10 @@
 <div class='navbar'>
-    <div class-'navbar-left'>
-        MERCY CORPS
+    <div class='navbar-left'>
+        <%= link_to "/" do %>
+            MERCY CORPS
+        <% end %>
     </div> 
-    <div class-'navbar-right'>
+    <div class='navbar-right'>
         <% if user_signed_in? %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         <% else %>
