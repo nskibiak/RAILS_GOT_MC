@@ -1,8 +1,14 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+ 
+  # ORIGINAL DEVISE SET UP
+  # devise :database_authenticatable, :registerable,
+  #        :recoverable, :rememberable, :validatable
+
+  # RECOMMENDED NEW DEVISE SET UP
+  devise :rememberable, :omniauthable, omniauth_providers: [:google_oauth2]
+
 end
 
 # :registerable is for signing up; might want to disable for RAILS_GOT...

@@ -5,7 +5,7 @@ ruby '2.6.4'
 
 # Setting up Google sign in authorization
 gem 'omniauth'
-gem 'dotenv-rails'
+gem 'dotenv-rails', groups: [:development, :test]
 gem 'omniauth-google-oauth2'
 
 gem 'devise'
