@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  # devise_for :users
-  # replacing original devise line with omniauth specifications
-  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
+  devise_for :users
 
   root to: 'grants#index'
 
