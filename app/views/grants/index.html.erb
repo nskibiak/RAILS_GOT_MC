@@ -2,10 +2,12 @@
     <h1>Testing Heroku Auto-Updates</h1>
     <p>Find me in app/views/grants/index.html.erb</p>
 
+    <%= "Hello, #{current_user.name}!" if user_signed_in? %>
+
     <!-- Accent-colored raised button with ripple -->
-    <button>
-    Button
-    </button>
+    <div>
+        <button>Button</button>
+    </div>
 
     <%#= javascript_pack_tag 'hello_react' %>
 </div>
