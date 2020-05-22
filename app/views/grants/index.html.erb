@@ -1,19 +1,10 @@
     <h1>Testing Heroku Auto-Updates</h1>
     <p>Find me in app/views/grants/index.html.erb</p>
 
-    <%= "Hello, #{current_user.name}!" if user_signed_in? %>
-
-<section class="section">
-    <div class="container">
-    <h1 class="title">
-        Hello World
-    </h1>
-    <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-    </p>
-    </div>
-</section>
-
-    <div class="button">Button</div>
+    <% if !user_signed_in? %>
+        <%= link_to "Sign in", new_user_session_path, class: "button" %>
+    <% else %>
+        <%= "Hello, #{current_user.name}!" if user_signed_in? %>
+    <% end %>
 
     <%#= javascript_pack_tag 'hello_react' %>
