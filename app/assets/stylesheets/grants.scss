@@ -25,11 +25,6 @@
     min-height: calc(100vh - 50px);
 }
 
-.notice {
-    // width: 100px;
-    background-color: seagreen;
-}
-
 .field input {
     display: block;
     width: 90%;
@@ -65,8 +60,6 @@
     width: 400px;
     margin-bottom: 50px;
     font-family: 'Open Sans', sans-serif;
-} h2 {
-    margin-bottom: 1.5rem;
 }
 
 .card:hover {
@@ -74,24 +67,35 @@
 }
 
 .button {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    background-color: steelblue;
-    // color: white;
-    // border-radius: 5px;
-    // min-height: 45px;
-    // width: 90px;
-    // font-family: 'Inter', sans-serif;
-    transition: background 0.4s,border 0.4s,color 0.4s;
-    border: 2px solid #000;
-    border-radius: 3px;
-    color: #000;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 700;
-    height: 34px;
-    line-height: 30px;
-    padding: 0 20px;
+    background-color: white;
+    border-color: #dbdbdb;
+    border-width: 1px;
+    color: #363636;
+    cursor: pointer;
+    justify-content: center;
+    padding-bottom: calc(0.5em - 1px);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: calc(0.5em - 1px);
     text-align: center;
-}
+    white-space: nowrap;
+  }
+
+  .button:hover, .button.is-hovered {
+    border-color: #b5b5b5;
+    color: #363636;
+  }
+  
+  .button:focus, .button.is-focused {
+    border-color: #3273dc;
+    color: #363636;
+  }
+  
+  .button:focus:not(:active), .button.is-focused:not(:active) {
+    box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+  }
+  
+  .button:active, .button.is-active {
+    border-color: #4a4a4a;
+    color: #363636;
+  }
